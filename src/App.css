@@ -1,38 +1,77 @@
-.App {
+html {
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  background-color: rgb(240, 244, 247);
+  background: linear-gradient(-70deg, #4674fe, #3063fc);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 80vw;
+  max-width: 35rem;
+  padding: 3rem 1rem 2rem 1rem;
+  margin-top: 5rem;
+
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.25);
+
   text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.title {
+  font-size: 2.8rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+.priceData {
+  margin: 0 2rem;
+
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.currency {
+  font: inherit;
+  height: 1.75rem;
+  padding: 0 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.price {
+  font-size: 1.5rem;
+}
+
+.error {
+  margin-top: 3rem;
+  color: red;
+}
+
+@media (max-width: 606px) {
+  .title {
+    font-size: 2.25rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 431px) {
+  .priceData {
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .card {
+    width: 90vw;
   }
 }
